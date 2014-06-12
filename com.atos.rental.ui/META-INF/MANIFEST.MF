@@ -7,6 +7,6 @@ Bundle-Activator: com.atos.rental.ui.RentalUiActivator
 Bundle-Vendor: ATOS
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- com.atos.rental.core;bundle-version="1.0.0"
+ com.atos.rental.core;bundle-version="1.0.0";visibility:=reexport
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
