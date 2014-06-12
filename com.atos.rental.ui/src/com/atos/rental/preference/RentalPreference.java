@@ -1,10 +1,13 @@
-package com.atos.rental.ui;
+package com.atos.rental.preference;
 
 import org.eclipse.jface.preference.ColorFieldEditor;
 import org.eclipse.jface.preference.FieldEditorPreferencePage;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
+
+import com.atos.rental.ui.RentalUIConstants;
+import com.atos.rental.ui.RentalUiActivator;
 
 public class RentalPreference extends FieldEditorPreferencePage implements
 		IWorkbenchPreferencePage, RentalUIConstants {

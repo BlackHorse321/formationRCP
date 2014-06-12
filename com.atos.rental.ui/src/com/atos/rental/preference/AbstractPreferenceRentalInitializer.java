@@ -1,9 +1,12 @@
-package com.atos.rental.ui;
+package com.atos.rental.preference;
 
 import org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.resource.StringConverter;
 import org.eclipse.swt.graphics.RGB;
+
+import com.atos.rental.ui.RentalUIConstants;
+import com.atos.rental.ui.RentalUiActivator;
 
 public class AbstractPreferenceRentalInitializer extends
 		AbstractPreferenceInitializer implements RentalUIConstants {
