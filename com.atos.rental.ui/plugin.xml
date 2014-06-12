@@ -93,5 +93,14 @@
             commandId="com.atos.rental.ui.HWcommandmenu">
       </handler>
    </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="com.atos.rental.ui.HWcommandmenu"
+            contextId="org.eclipse.ui.contexts.dialogAndWindow"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+9">
+      </key>
+   </extension>
 
 </plugin>
