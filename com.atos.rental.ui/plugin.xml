@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="com.atos.rental.ui.category1"
+            name="name">
+      </category>
+      <view
+            category="com.atos.rental.ui.category1"
+            class="com.atos.rental.ui.views.RentalPropertyView"
+            id="com.atos.rental.ui.rentalPropertyView"
+            name="rentalPropertyView"
+            restorable="true">
+      </view>
+      <view
+            category="com.atos.rental.ui.category1"
+            class="com.atos.rental.ui.views.RentalPropetertyTreeView"
+            id="com.atos.rental.ui.view1"
+            name="agencies"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.atos.rental.ui.perspectives.RentalPerspectives"
+            icon="icons/Agency.png"
+            id="com.atos.rental.ui.perspectives.RentalPerspectives"
+            name="Rental">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="com.atos.rental.ui.RentalPreference"
+            id="com.atos.rental.ui.preference"
+            name="Rental">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="com.atos.rental.ui.AbstractPreferenceRentalInitializer">
+      </initializer>
+   </extension>
+
+</plugin>
