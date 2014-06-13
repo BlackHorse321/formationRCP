@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
+   <extension-point id="com.atos.ui.color.property" name="com.atos.ui.color.property" schema="schema/com.atos.ui.color.property.exsd"/>
    <extension
          point="org.eclipse.ui.views">
       <category
@@ -108,6 +109,21 @@
             schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
             sequence="M1+9">
       </key>
+   </extension>
+   <extension
+         id="id4"
+         name="name"
+         point="com.atos.ui.color.property">
+      <palette
+            Class="com.atos.rental.ui.Daltonien"
+            id="com.atos.rental.ui.Daltonien"
+            name="Daltonien">
+      </palette>
+      <palette
+            Class="com.atos.rental.ui.CRM"
+            id="com.atos.rental.ui.crm"
+            name="CRM">
+      </palette>
    </extension>
 
 </plugin>
