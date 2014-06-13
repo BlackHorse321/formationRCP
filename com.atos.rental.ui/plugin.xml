@@ -5,20 +5,27 @@
          point="org.eclipse.ui.views">
       <category
             id="com.atos.rental.ui.category1"
-            name="name">
+            name="%category.name">
       </category>
       <view
             category="com.atos.rental.ui.category1"
             class="com.atos.rental.ui.views.RentalPropertyView"
             id="com.atos.rental.ui.rentalPropertyView"
-            name="rentalPropertyView"
+            name="%view.name"
             restorable="true">
       </view>
       <view
             category="com.atos.rental.ui.category1"
             class="com.atos.rental.ui.views.RentalPropetertyTreeView"
             id="com.atos.rental.ui.view1"
-            name="agencies"
+            name="%view.name.0"
+            restorable="true">
+      </view>
+      <view
+            category="com.atos.rental.ui.category1"
+            class="com.atos.rental.ui.views.CustomerPropertyView"
+            id="com.atos.rental.ui.CustomerView"
+            name="CustomerView"
             restorable="true">
       </view>
    </extension>
@@ -28,7 +35,7 @@
             class="com.atos.rental.ui.perspectives.RentalPerspectives"
             icon="icons/Agency.png"
             id="com.atos.rental.ui.perspectives.RentalPerspectives"
-            name="Rental">
+            name="%perspective.name">
       </perspective>
    </extension>
    <extension
@@ -36,7 +43,7 @@
       <page
             class="com.atos.rental.preference.RentalPreference"
             id="com.atos.rental.ui.preference"
-            name="Rental">
+            name="%page.name">
       </page>
    </extension>
    <extension
@@ -52,10 +59,10 @@
             locationURI="menu:org.eclipse.ui.main.menu?after=additions">
          <menu
                id="com.atos.rental.HWmenu"
-               label="Hello World menu">
+               label="%menu.label">
             <command
                   commandId="com.atos.rental.ui.HWcommandmenu"
-                  label="Hello World Command"
+                  label="%command.label"
                   style="push">
             </command>
          </menu>
@@ -65,7 +72,7 @@
             locationURI="toolbar:org.eclipse.ui.views.ResourceNavigator?after=additions">
          <command
                commandId="com.atos.rental.ui.HWcommandmenu"
-               label="HW Navigator"
+               label="%command.label.0"
                style="push">
          </command>
       </menuContribution>
@@ -74,7 +81,7 @@
             locationURI="popup:com.atos.rental.ui.view1?after=additions">
          <command
                commandId="com.atos.rental.ui.HWcommandmenu"
-               label="Hello World popup"
+               label="%command.label.1"
                style="push">
          </command>
       </menuContribution>
@@ -83,7 +90,7 @@
          point="org.eclipse.ui.commands">
       <command
             id="com.atos.rental.ui.HWcommandmenu"
-            name="my command">
+            name="%command.name">
       </command>
    </extension>
    <extension

@@ -16,6 +16,7 @@ public class RentalPerspectives implements IPerspectiveFactory {
 		addPerspectiveShortcuts(layout);
 		layout.addView("com.atos.rental.ui.rentalPropertyView", IPageLayout.BOTTOM, 0.5f, IPageLayout.ID_EDITOR_AREA);
 		layout.addView("com.atos.rental.ui.view1", IPageLayout.TOP, 0.5f, "com.atos.rental.ui.rentalPropertyView");
+		layout.addView("com.atos.rental.ui.CustomerView", IPageLayout.RIGHT, 0.5f, "com.atos.rental.ui.view1");
 	}
 
 	/**
