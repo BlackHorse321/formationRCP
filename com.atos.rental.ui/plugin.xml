@@ -42,9 +42,15 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
+            class="com.atos.rental.preference.RentalColorChoice"
+            id="com.atos.rental.ui.RentalColor"
+            name="Rental Palette">
+      </page>
+      <page
+            category="com.atos.rental.ui.RentalColor"
             class="com.atos.rental.preference.RentalPreference"
             id="com.atos.rental.ui.preference"
-            name="%page.name">
+            name="Default">
       </page>
    </extension>
    <extension
@@ -115,14 +121,19 @@
          name="name"
          point="com.atos.ui.color.property">
       <palette
-            Class="com.atos.rental.ui.Daltonien"
+            Class="com.atos.rental.preference.Daltonien"
             id="com.atos.rental.ui.Daltonien"
             name="Daltonien">
       </palette>
       <palette
-            Class="com.atos.rental.ui.CRM"
+            Class="com.atos.rental.preference.CRM"
             id="com.atos.rental.ui.crm"
             name="CRM">
+      </palette>
+      <palette
+            Class="com.atos.rental.preference.DefaultPalette"
+            id="com.atos.rental.ui.default.palette"
+            name="Default">
       </palette>
    </extension>
 

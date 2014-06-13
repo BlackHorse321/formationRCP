@@ -1,4 +1,4 @@
-package com.atos.rental.ui;
+package com.atos.rental.preference;
 
 import org.eclipse.jface.viewers.IColorProvider;
 

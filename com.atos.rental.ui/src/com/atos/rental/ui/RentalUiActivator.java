@@ -16,6 +16,8 @@ import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.FrameworkUtil;
 
+import com.atos.rental.preference.Palette;
+
 /**
  * The activator class controls the plug-in life cycle
  */
@@ -109,6 +111,10 @@ public class RentalUiActivator extends AbstractUIPlugin implements
 				.getEntry(IMG_RENTAL_OBJECT_KEY)));
 		reg.put(IMG_AGENCY_KEY,
 				ImageDescriptor.createFromURL(b.getEntry(IMG_AGENCY_KEY)));
+	}
+
+	public Map<String, Palette> getPaletteManager() {
+		return paletteManager;
 	}
 
 }

@@ -1,20 +1,17 @@
 package com.atos.rental.ui.views;
 
 import java.util.Collection;
+import java.util.Map;
 
-import org.eclipse.jface.resource.ColorRegistry;
 import org.eclipse.jface.resource.ImageRegistry;
-import org.eclipse.jface.resource.JFaceResources;
-import org.eclipse.jface.resource.StringConverter;
 import org.eclipse.jface.viewers.IColorProvider;
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.Viewer;
-import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Image;
-import org.eclipse.swt.widgets.Display;
 
+import com.atos.rental.preference.Palette;
 import com.atos.rental.ui.RentalUIConstants;
 import com.atos.rental.ui.RentalUiActivator;
 import com.opcoach.training.rental.Customer;
@@ -179,40 +176,26 @@ public class RentalProvider extends LabelProvider implements
 
 	@Override
 	public Color getForeground(Object element) {
-		if (element instanceof Customer){
-			
-			return getColor(RentalUiActivator.getDefault().getPreferenceStore().getString(PREF_CUSTOMER_COLOR));
-     		
-		}
-		if (element instanceof Rental){
-			return getColor(RentalUiActivator.getDefault().getPreferenceStore().getString(PREF_RENTAL_COLOR));
-     		
-		}
-		if (element instanceof RentalObject){
-			
 		
-		return getColor(RentalUiActivator.getDefault().getPreferenceStore().getString(PREF_OBJECT_COLOR));
-	
-		}
-
-		return null;
+		Map<String, Palette> palettes = RentalUiActivator.getDefault().getPaletteManager();
+		
+		String idPal = RentalUiActivator.getDefault().getPreferenceStore().getString(PREF_PALETTE);
+		Palette p = palettes.get(idPal);
+		
+		return p.getPalette().getForeground(element);
+		
 	}
 	@Override
 	public Color getBackground(Object element) {
 
-		return null;
+		Map<String, Palette> palettes = RentalUiActivator.getDefault().getPaletteManager();
+		
+		String idPal = RentalUiActivator.getDefault().getPreferenceStore().getString(PREF_PALETTE);
+		Palette p = palettes.get(idPal);
+		
+		return p.getPalette().getBackground(element);
 	}
 	
-	private Color getColor(String rgbKey){
-		ColorRegistry colorRegistry = JFaceResources.getColorRegistry();
-		
-		Color col = colorRegistry.get(rgbKey);
-		if (col ==null){
-			colorRegistry.put(rgbKey, StringConverter.asRGB(rgbKey));
-			col = colorRegistry.get(rgbKey);
-		}
-		
-		return col;
-	}
+
 
 }

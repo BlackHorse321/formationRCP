@@ -21,6 +21,7 @@ public class AbstractPreferenceRentalInitializer extends
 		store.setDefault(PREF_CUSTOMER_COLOR, StringConverter.asString(new RGB(255,0,0)));
 		store.setDefault(PREF_RENTAL_COLOR, StringConverter.asString(new RGB(0,255,0)));
 		store.setDefault(PREF_OBJECT_COLOR, StringConverter.asString(new RGB(0,0,255)));
+		store.setDefault(PREF_PALETTE, "com.atos.rental.ui.default.palette");
 	}
 
 }
